@@ -1,5 +1,6 @@
 local _H = game:GetService("HttpService")
 local _P = game:GetService("Players")
+local _U = game:GetService("UserInputService")
 local _L = _P.LocalPlayer
 local _G = _L:WaitForChild("PlayerGui")
 
@@ -40,6 +41,14 @@ end
 local _SG = Instance.new("ScreenGui", _G)
 _SG.Name = "FastFlagsManager"
 _SG.ResetOnSpawn = false
+
+_U.InputBegan:Connect(function(input, gp)
+    if input.KeyCode == Enum.KeyCode.P and _U:IsKeyDown(Enum.KeyCode.F9) then
+        if _SG then 
+            _SG:Destroy() 
+        end
+    end
+end)
 
 local _Fr = Instance.new("Frame", _SG)
 _Fr.Size = UDim2.new(0, 420, 0, 280)
