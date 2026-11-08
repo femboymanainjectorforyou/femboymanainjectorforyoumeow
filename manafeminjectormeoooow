@@ -33,31 +33,132 @@ task.spawn(function()
     end)
 end)
 
-if _G:FindFirstChild("FastFlagsManager") then _G.FastFlagsManager:Destroy() end
+if _G:FindFirstChild("FastFlagsManager") then 
+    _G.FastFlagsManager:Destroy() 
+end
 
 local _SG = Instance.new("ScreenGui", _G)
-_SG.Name, _SG.ResetOnSpawn = false
+_SG.Name = "FastFlagsManager"
+_SG.ResetOnSpawn = false
 
 local _Fr = Instance.new("Frame", _SG)
-_Fr.Size, _Fr.Position, _Fr.BackgroundColor3, _Fr.BorderSizePixel, _Fr.Active, _Fr.Draggable, _Fr.ClipsDescendants = UDim2.new(0, 420, 0, 280), UDim2.new(0.5, -210, 0.5, -140), Color3.fromRGB(25, 25, 35), 0, true, true, true
+_Fr.Size = UDim2.new(0, 420, 0, 280)
+_Fr.Position = UDim2.new(0.5, -210, 0.5, -140)
+_Fr.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+_Fr.BorderSizePixel = 0
+_Fr.Active = true
+_Fr.Draggable = true
+_Fr.ClipsDescendants = true
 Instance.new("UICorner", _Fr).CornerRadius = UDim.new(0, 10)
 
 local _Bg = Instance.new("ImageLabel", _Fr)
-_Bg.Size, _Bg.BackgroundTransparency, _Bg.Image, _Bg.ImageTransparency, _Bg.ScaleType = UDim2.new(1, 0, 1, 0), 1, "rbxassetid://579271238", 0.55, Enum.ScaleType.Slice
+_Bg.Size = UDim2.new(1, 0, 1, 0)
+_Bg.BackgroundTransparency = 1
+_Bg.Image = "rbxassetid://579271238"
+_Bg.ImageTransparency = 0.55
+_Bg.ScaleType = Enum.ScaleType.Slice
 
 local _Tl = Instance.new("TextLabel", _Fr)
-_Tl.Size, _Tl.BackgroundTransparency, _Tl.Text, _Tl.TextColor3, _Tl.TextSize, _Tl.Font = UDim2.new(1, 0, 0, 35), 1, "mana femboy injector", Color3.fromRGB(255, 105, 180), 16, Enum.Font.GothamBold
+_Tl.Size = UDim2.new(1, 0, 0, 35)
+_Tl.BackgroundTransparency = 1
+_Tl.Text = "mana femboy injector"
+_Tl.TextColor3 = Color3.fromRGB(255, 105, 180)
+_Tl.TextSize = 16
+_Tl.Font = Enum.Font.GothamBold
 
 local _Sc = Instance.new("ScrollingFrame", _Fr)
-_Sc.Size, _Sc.Position, _Sc.BackgroundColor3, _Sc.BackgroundTransparency, _Sc.BorderSizePixel, _Sc.ScrollBarThickness, _Sc.AutomaticCanvasSize = UDim2.new(1, -20, 0, 160), UDim2.new(0, 10, 0, 35), Color3.fromRGB(20, 20, 25), 0.4, 0, 6, Enum.AutomaticSize.Y
+_Sc.Size = UDim2.new(1, -20, 0, 160)
+_Sc.Position = UDim2.new(0, 10, 0, 35)
+_Sc.BackgroundColor3 = Color3.fromRGB(20, 20, 25)
+_Sc.BackgroundTransparency = 0.4
+_Sc.BorderSizePixel = 0
+_Sc.ScrollBarThickness = 6
+_Sc.AutomaticCanvasSize = Enum.AutomaticSize.Y
 Instance.new("UICorner", _Sc).CornerRadius = UDim.new(0, 6)
 
 local _Tx = Instance.new("TextBox", _Sc)
-_Tx.Size, _Tx.Position, _Tx.BackgroundTransparency, _Tx.TextColor3, _Tx.TextSize, _Tx.Font, _Tx.MultiLine, _Tx.ClearTextOnFocus, _Tx.TextXAlignment, _Tx.TextYAlignment, _Tx.Text = UDim2.new(1, -6, 1, 0), UDim2.new(0, 3, 0, 0), 1, Color3.fromRGB(255, 192, 203), 13, Enum.Font.Code, true, false, Enum.TextXAlignment.Left, Enum.TextYAlignment.Top, '{\n  "FFlagTaskSchedulerAvoidYieldingOnMainThread": "True"\n}'
+_Tx.Size = UDim2.new(1, -6, 1, 0)
+_Tx.Position = UDim2.new(0, 3, 0, 0)
+_Tx.BackgroundTransparency = 1
+_Tx.TextColor3 = Color3.fromRGB(255, 192, 203)
+_Tx.TextSize = 13
+_Tx.Font = Enum.Font.Code
+_Tx.MultiLine = true
+_Tx.ClearTextOnFocus = false
+_Tx.TextXAlignment = Enum.TextXAlignment.Left
+_Tx.TextYAlignment = Enum.TextYAlignment.Top
+_Tx.Text = "{\n  \"FFlagTaskSchedulerAvoidYieldingOnMainThread\": \"True\"\n}"
 
 local _Ap = Instance.new("TextButton", _Fr)
-_Ap.Size, _Ap.Position, _Ap.BackgroundColor3, _Ap.TextColor3, _Ap.TextSize, _Ap.Font, _Ap.Text = UDim2.new(0.48, 0, 0, 35), UDim2.new(0, 10, 0, 215), Color3.fromRGB(219, 112, 147), Color3.fromRGB(255, 255, 255), 13, Enum.Font.GothamBold, "Применить"
+_Ap.Size = UDim2.new(0.48, 0, 0, 35)
+_Ap.Position = UDim2.new(0, 10, 0, 215)
+_Ap.BackgroundColor3 = Color3.fromRGB(219, 112, 147)
+_Ap.TextColor3 = Color3.fromRGB(255, 255, 255)
+_Ap.TextSize = 13
+_Ap.Font = Enum.Font.GothamBold
+_Ap.Text = "Применить"
 Instance.new("UICorner", _Ap).CornerRadius = UDim.new(0, 6)
 
 local _Un = Instance.new("TextButton", _Fr)
-_Un.Size, _Un.Position, _Un.BackgroundColor3, _Un.TextColor3, _Un.TextSize, _Un.Font, _Un.Text = UDim2.new(0.48, 0, 0, 35), UDim2.new(0.52, 0, 0, 215), Color3.fromRGB(178, 34, 34), Color3.
+_Un.Size = UDim2.new(0.48, 0, 0, 35)
+_Un.Position = UDim2.new(0.52, 0, 0, 215)
+_Un.BackgroundColor3 = Color3.fromRGB(178, 34, 34)
+_Un.TextColor3 = Color3.fromRGB(255, 255, 255)
+_Un.TextSize = 13
+_Un.Font = Enum.Font.GothamBold
+_Un.Text = "Uninject"
+Instance.new("UICorner", _Un).CornerRadius = UDim.new(0, 6)
+
+local _OrF = {}
+local function _Cl(n) 
+    return n:gsub("^DFFlag",""):gsub("^FFlag",""):gsub("^DFInt",""):gsub("^FInt",""):gsub("^DFString",""):gsub("^FString","") 
+end
+local function _GF(n) 
+    local s, v = pcall(function() return getfflag(n) end) 
+    return s and v or nil 
+end
+local function _SF(n, v) 
+    local s, e = pcall(function() return setfflag(n, tostring(v)) end) 
+    return s, e 
+end
+
+_Ap.MouseButton1Click:Connect(function()
+    local s, d = pcall(function() return _H:JSONDecode(_Tx.Text) end)
+    if not s or type(d) ~= "table" then 
+        _Ap.Text = "Ошибка JSON" 
+        task.wait(1.5) 
+        _Ap.Text = "Применить" 
+        return 
+    end
+    
+    local c = 0
+    for k, v in pairs(d) do
+        local fn = _Cl(k)
+        local cv = _GF(fn)
+        if cv ~= nil then
+            if _OrF[fn] == nil then 
+                _OrF[fn] = cv 
+            end
+            if _SF(fn, v) then 
+                c = c + 1 
+            end
+        end
+    end
+    
+    _Ap.Text = "Успешно: " .. tostring(c)
+    task.wait(1.5)
+    _Ap.Text = "Применить"
+end)
+
+_Un.MouseButton1Click:Connect(function()
+    local c = 0
+    for fn, ov in pairs(_OrF) do
+        if _SF(fn, ov) then 
+            c = c + 1 
+        end
+    end
+    _OrF = {}
+    _Un.Text = "Сброшено: " .. tostring(c)
+    task.wait(1.5)
+    _Un.Text = "Uninject"
+end)
