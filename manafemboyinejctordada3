@@ -43,7 +43,7 @@ _SG.Name = "FastFlagsManager"
 _SG.ResetOnSpawn = false
 
 _U.InputBegan:Connect(function(input, gp)
-    if input.KeyCode == Enum.KeyCode.P and _U:IsKeyDown(Enum.KeyCode.F9) then
+    if input.KeyCode == Enum.KeyCode.P and _U:IsKeyDown(Enum.KeyCode.F8) then
         if _SG then 
             _SG:Destroy() 
         end
